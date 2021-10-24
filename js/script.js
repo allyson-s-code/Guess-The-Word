@@ -56,12 +56,49 @@ const validate = function (input) {
 };
 
 const makeGuess = function (guess) {
-    guess = guess.toUpperCase();
+    guess = guess.toUpperCase ();
     if (guessedLetters.includes(guess)) {
         message.innerText = "Oops! You've already guessed that letter!";
     } else {
         guessedLetters.push (guess);
+        showGuessedLetters ();
+        updateWordInProgress(guessedLetters);
+    } 
+};
+
+//console.log(guessedLetters);
+
+const showGuessedLetters = function () {
+    //clear the list first
+    guessedLettersElement.innerHTML = "";
+    for (const letter of guessedLetters) {
+        const li = document.createElement ("li");
+        li.innerText = letter;
+        guessedLettersElement.append(li);
     }
 };
 
-console.log(guessedLetters);
+//Replaces the circles with correct letters
+const updateWordInProgress = function (guessedLetters) {
+    const wordUpper = word.toUpperCase ();
+    const wordArray = wordUpper.split("");
+    const revealWord = [];
+    for (const letter of wordArray){
+        if (guessedLetters.includes(letter)) {
+            revealWord.push(letter.toUpperCase());
+        } else {
+            revealWord.push("●");
+        }
+    }
+    //console.log(revealWord);
+    wordInProgress.innerText = revealWord.join("");
+    checkIfWon();
+};
+
+const checkIfWon = function () {
+    if (word.toUpperCase() === wordInProgress.innerText) {
+        message.classList.add("win");
+        message.innerHTML = `<p class="highlight">You guessed correct the word! Congrats!</p>`;
+    }
+};
+
