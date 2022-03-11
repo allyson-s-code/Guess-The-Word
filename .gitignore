@@ -1,0 +1,5 @@
+.DS_Store
+thumbs.db
+.vscode
+TODO
+node_modules/

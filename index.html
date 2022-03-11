@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Word</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo&family=B612&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Guess the Word</h1>
+      <p class="message"></p>
+      <p class="word-in-progress"></p>
+      <p class="remaining">You have <span>6 guesses</span> remaining.</p>
+      <ul class="guessed-letters"></ul>
+      <form action="" class="guess-form">
+
+        <label for="letter">Type one letter:</label>
+        <input type="text" name="letter" class="letter" type=text>
+        <div class="form-element button-element">
+          <button class="guess">Guess!</button>
+        </div>
+      </form>
+      <button class="play-again hide">Play Again!</button>
+    </div>
+  </body>
+
+</html>
