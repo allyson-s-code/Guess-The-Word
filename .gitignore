@@ -1,5 +1,15 @@
 .DS_Store
 thumbs.db
 .vscode
+<<<<<<< HEAD
 TODO
 node_modules/
+=======
+.eslintrc.json
+
+TODO
+
+node_modules/
+package.json
+package-lock.json
+>>>>>>> 93320ae54bb06aa43ab2f3907ef667bdf44f172e

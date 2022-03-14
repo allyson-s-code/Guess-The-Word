@@ -35,11 +35,9 @@ h1 {
 }
 
 .container {
-  background: radial-gradient(
-    50% 50% at 50% 50%,
+  background: radial-gradient(50% 50% at 50% 50%,
     rgba(167, 237, 237, 0.3) 0%,
-    rgba(156, 226, 226, 0) 100%
-  );
+    rgba(156, 226, 226, 0) 100%);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -136,7 +134,11 @@ input:focus {
   color: white;
 }
 
+<<<<<<< HEAD
 /* animated background */
+=======
+/* animatied background */
+>>>>>>> 93320ae54bb06aa43ab2f3907ef667bdf44f172e
 .win {
   padding: 0 1em;
   background: linear-gradient(-45deg, #ff9d64, #f5620c);
@@ -156,4 +158,8 @@ input:focus {
   100% {
     background-position: 0% 50%;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 93320ae54bb06aa43ab2f3907ef667bdf44f172e
